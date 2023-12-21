@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://barpak.org
 asset_base_url: /assets
 
-google_analytics: # your google analytics id
+google_analytics: G-14HHMX4TR6
 
 future: true # Show blog post of future date
 permalink: /blogs/:year/:month/:day/:title/
