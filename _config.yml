@@ -1,23 +1,15 @@
-title: Jekyll Play
-email: c2edevofficial@gmail.com
+title: Beautiful Barpak
+email: btfulnepal@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The minimal Jekyll base template with I18n support to quickly start with.
+  Beautiful Barpak is a website that shows the beauty of Barpak village.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-image_base_url: /assets/img
+url: https://barpak.org
+asset_base_url: /assets
 
 google_analytics: # your google analytics id
 
 future: true # Show blog post of future date
 permalink: /blogs/:year/:month/:day/:title/
-
-# Pagination settings
-pagination:
-  enabled: true
-  per_page: 10
-  sort_field: 'date'
-  sort_reverse: true
-  permalink: '/page/:num/'
 
 sass:
   style: compressed

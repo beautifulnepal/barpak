@@ -1,19 +1,6 @@
-# Jekyll Play
+# Beautiful Barpak
 
-This is the minimal [Jekyll](https://jekyllrb.com) base template to quickly start playing with.
-
-# What it includes
-
-- [Jekyll v4.3.2](https://jekyllrb.com/)
-- [Bootstrap v5.3.2](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-- [Fontawesome v6.5.1](https://fontawesome.com/)
-- Google Analytics include file
-- Default `Coming Soon` page
-- `Home`, `About` and `Blogs` sample pages
-- A `custom.js` inside `assets/js/`
-
-_Play and enjoyee!_
-
+The website repo for [Beautiful Barpak](https://barpak.org). This project is under the [Beautiful Nepal](https://beautifulnepal.org) project.
 
 # Run with Docker
 

@@ -5,21 +5,17 @@
 
   <body class="d-flex flex-column">
     <div id="page-content">
-      {% unless page.coming_soon %}
-        <header>
-          {% include navbar.html %}
-        </header>
-      {% endunless %}
+      <header>
+        {% include navbar.html %}
+      </header>
 
       <main>
         {{ content }}
       </main>
     </div>
 
-    {% unless page.coming_soon %}
-      {%- include footer.html -%}
-      {% include javascripts.html %}
-    {% endunless %}
+    {% include javascripts.html %}
+    {% include youtube-video-modal.html %}
   </body>
 
 </html>

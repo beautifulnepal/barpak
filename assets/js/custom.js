@@ -1,16 +1,56 @@
 /*Custom JavaScript*/
 
-/*Custom JavaScript*/
+$(function () {
+  ("use strict"); // Start of use strict
 
-$(function(){
-  $('.language-switch-section a').on("click", function(e){
-    let new_path;
+  // Activate wow.js
+  // new WOW().init();
 
-    if(location.pathname.indexOf("en") != -1) {
-      new_path = "/";
+  var lightbox = $("#gallery a").simpleLightbox();
+
+  // Closes responsive menu when a scroll trigger link is clicked
+  $(".js-scroll-trigger").click(function () {
+    $(".navbar-collapse").collapse("hide");
+  });
+
+  // Collapse Navbar
+  var navbarCollapse = function () {
+    if ($("#mainNav").offset().top > 100) {
+      $("#mainNav").addClass("scrolled");
     } else {
-      new_path = "/en";
+      $("#mainNav").removeClass("scrolled");
     }
-    window.location.href = new_path;
+  };
+
+  $(document).scroll(function () {
+    var $nav = $(".navbar.fixed-top");
+    if ($(this).scrollTop() > $nav.height() + 300) {
+      $('#toTop').css('display', 'block');
+    } else {
+      $('#toTop').css('display', '');
+    }
+  });
+
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
+
+  // rendering youtube video in the Modal
+  var $videoSrc;
+  $(".youtube-video-btn").click(function () {
+    $videoSrc = $(this).data("src");
+  });
+  console.log($videoSrc);
+  // when the modal is opened autoplay it
+  $("#youtubeVideoModal").on("shown.bs.modal", function (e) {
+    $("#youtubeVideo").attr("src", $videoSrc);
+  });
+
+  // stop playing the youtube video when I close the modal
+  $("#youtubeVideoModal").on("hide.bs.modal", function (e) {
+    $("#youtubeVideo").replaceWith(
+      '<iframe class="embed-responsive-item" src="" id="youtubeVideo" allowscriptaccess="always" allow="autoplay"></iframe>'
+    );
   });
 });
